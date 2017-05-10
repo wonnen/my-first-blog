@@ -1,0 +1,17 @@
+h1 {
+	color: #2441FF;
+	font-family: ‘Space Mono’, monospace;
+}
+
+body {
+	padding-left: 15px;
+}
+
+a {
+	color: #111111;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
