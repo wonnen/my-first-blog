@@ -1,18 +1,23 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>The Blog Page</title>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     </head>
     <body>
 	<div>
-            <a href=../ class="button">Home</a>
+            <a href=../ class=“button”>Home</a>
         </div>
 
         <div>
-            <h1>This is blog page</h1>
+		<hr />
+        	<h1>This is blog page</h1>
         </div>
 
 	{% for post in posts %}
         <div>
+		<hr />
 		<h2><a href=“”>{{ post.title }}</a></h1>
 		<p>{{ post.text|linebreaksbr }}</p>
 		<p>created : {{ post.created_date }}</p>
