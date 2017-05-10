@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>The Blog Page</title>
+    </head>
+    <body>
+	<div>
+            <a href=../ class="button">Home</a>
+        </div>
+
+        <div>
+            <h1>This is blog page</h1>
+        </div>
+
+	{% for post in posts %}
+        <div>
+		<h2><a href=“”>{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaksbr }}</p>
+		<p>created : {{ post.created_date }}</p>
+        </div>
+	{% endfor %}
+    </body>
+</html>

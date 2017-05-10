@@ -5,5 +5,6 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'', include('main.urls')),
+    url(r'^blog/', include('blog.urls'))
 
 ]
