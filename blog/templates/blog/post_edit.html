@@ -7,23 +7,22 @@
     </head>
     <body>
 	<div>
-        	<a href=../ class=“button”>Home</a>
+        	<a href=../ class=“button”>Back</a>
 		<ls> | </ls>
-		<a href=./new class=”button”>New_Post</a>
+        	<a href=../../ class=“button”>Home</a>
         </div>
 
         <div>
 		<hr />
-        	<h1>This is blog page</h1>
+        	<h1>New Post</h1>
+		<hr />
         </div>
 
-	{% for post in posts %}
         <div>
-		<hr />
-		<h2>{{ post.title }}</h1>
-		<p>{{ post.text|linebreaksbr }}</p>
-		<p>created : {{ post.created_date }}</p>
+		<form method=POST class=“post-form”>{% csrf_token %}
+			{{ form.as_p }}
+			<button type=“submit” class=“save btn btn-default”>Save</button>
+		</form>
         </div>
-	{% endfor %}
     </body>
 </html>
